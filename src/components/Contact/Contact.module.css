@@ -1,0 +1,68 @@
+.dataBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.elemBlock {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  gap: 10px;
+}
+
+.contactListItem {
+  padding: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 4mm ridge #66c3c76b;
+  flex: 1 1 100%;
+}
+
+@media (min-width: 1200px) {
+  .contactListItem {
+    flex: 1 1 calc(33.333% - 1rem);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .contactListItem {
+    flex: 1 1 calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 767px) {
+  .contactListItem {
+    flex: 1 1 100%;
+  }
+}
+
+.deleteButton {
+  padding: 10px 15px;
+  cursor: pointer;
+
+  background-image: linear-gradient(
+    to right,
+    #ff6e7f 0%,
+    #bfe9ff 51%,
+    #ff6e7f 100%
+  );
+  margin: 10px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: black;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  border: none;
+  display: block;
+}
+
+.deleteButton:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
