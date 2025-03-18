@@ -13,8 +13,12 @@ function App() {
   const dispatch = useDispatch();
   const isLoading = useSelector(selectIsLoading);
   const error = useSelector(selectError);
+  const savedTheme = localStorage.getItem("theme") || "light";
+  const [theme, setTheme] = useState(savedTheme);
 
-  const [theme, setTheme] = useState("light");
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
