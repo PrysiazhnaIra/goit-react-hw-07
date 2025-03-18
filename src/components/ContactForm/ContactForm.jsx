@@ -13,7 +13,7 @@ const ContactSchema = Yup.object().shape({
     })
     .min(3, "Too Short!")
     .max(50, "Too Long!")
-    .required("Required"),
+    .required("The field is required"),
   number: Yup.string()
     .matches(/^[0-9-]+$/, {
       message: "Must be digits (you can add hyphen (-))",
@@ -21,7 +21,7 @@ const ContactSchema = Yup.object().shape({
     })
     .min(3, "Too Short!")
     .max(50, "Too Long!")
-    .required("Required"),
+    .required("The field is required"),
 });
 
 export const ContactForm = () => {
@@ -55,13 +55,25 @@ export const ContactForm = () => {
           <label className={css.label} htmlFor="name">
             Name
           </label>
-          <Field type="text" id="name" name="name" className={css.input} />
+          <Field
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your data..."
+            className={css.input}
+          />
           <ErrorMessage name="name" component="div" className={css.error} />
 
           <label className={css.label} htmlFor="number">
             Number
           </label>
-          <Field type="tel" id="number" name="number" className={css.input} />
+          <Field
+            type="tel"
+            id="number"
+            name="number"
+            placeholder="Enter your data..."
+            className={css.input}
+          />
           <ErrorMessage name="number" component="div" className={css.error} />
 
           <button type="submit" className={css.btn} disabled={isSubmitting}>

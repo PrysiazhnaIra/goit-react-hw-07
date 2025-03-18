@@ -30,3 +30,38 @@
   filter: blur(10px);
   z-index: -1;
 }
+
+.app {
+  text-align: center;
+  padding: 30px;
+  transition: background 0.3s;
+  border-radius: 30px;
+}
+
+.btnTheme {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.lightTheme {
+  width: 30px;
+  height: 30px;
+  fill: orange;
+}
+
+.darkTheme {
+  width: 30px;
+  height: 30px;
+  fill: white;
+}
+
+.light {
+  background: #f0f8ff;
+  color: black;
+}
+
+.dark {
+  background: black;
+  color: white;
+}
